@@ -1,3 +1,16 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "5.84.0"
+    }
+  }
+}
+
+provider "aws" {
+  # Configuration options
+}
+
 resource "aws_iam_user" "vault_admin" {
   name = var.user_name
   path = "/"
